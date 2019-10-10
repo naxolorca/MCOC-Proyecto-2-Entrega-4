@@ -22,7 +22,7 @@ Para una simulación con un dt de 0.001 segundos, un t max de 0.5 segundos y un 
 ## Graficos
 	1 particula
 
-![Grafico_01](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/Grafico_01.png)
+	![Grafico_01](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/Grafico_01.png)
 
 	2 particulas
 
