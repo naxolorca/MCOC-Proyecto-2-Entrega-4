@@ -130,4 +130,4 @@ for i in range(Nparticulas):
 ax.axhline(d/2,color="k",linestyle="--")
 
 axis("equal")
-savefig("Grafico {0:02.0f}.png".format(Nparticulas))
+savefig("Grafico_{0:02.0f}.png".format(Nparticulas))
