@@ -22,31 +22,31 @@ Para una simulación con un dt de 0.001 segundos, un t max de 0.5 segundos y un 
 ## Graficos
 	1 particula
 
-	(https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/ruta/al/asset/Grafico 01.png)
+(https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/ruta/al/asset/Grafico 01.png)
 
 	2 particulas
 
-	(https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/ruta/al/asset/Grafico 02.png)
+(https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/ruta/al/asset/Grafico 02.png)
 
 	3 particulas
 
-	(https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/ruta/al/asset/Grafico 03.png)
+(https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/ruta/al/asset/Grafico 03.png)
 
 	5 particulas
 
-	(https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/ruta/al/asset/Grafico 05.png)
+(https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/ruta/al/asset/Grafico 05.png)
 
 	8 particulas
 
-	(https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/ruta/al/asset/Grafico 08.png)
+(https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/ruta/al/asset/Grafico 08.png)
 
 	10 particulas
 
-	(https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/ruta/al/asset/Grafico 10.png)
+(https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/ruta/al/asset/Grafico 10.png)
 
 	12 particulas
 
-	(https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/ruta/al/asset/Grafico 12.png)
+(https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/ruta/al/asset/Grafico 12.png)
 
 ## Discución
 
