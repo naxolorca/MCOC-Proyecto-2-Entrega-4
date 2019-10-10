@@ -24,10 +24,10 @@ Para una simulación con un dt de 0.001 segundos, un t max de 0.5 segundos y un 
 
 ## Discución
 
-	Utilizando el codigo con integración mejorada, se puede notar que python integra de forma veloz cada particula
-	por separado, pero se puede notar un claro cuello de botella en la parte del codigo responsable de encontrar y 
-	aplicar un choque entre particulas. Este codigo se compone de 2 recorridos for, por lo que se comprueba que 
-	cada particula por separado no choque con las demas, es por esto que aumento de forma exponencia el tiempo 
-	necesario para recorrer estos ciclos y resolver de forma adecuada el programa.
-	
+	Utilizando el codigo con integración mejorada, se puede notar que python integra de forma 
+	veloz cada particula por separado, pero se puede notar un claro cuello de botella en la 
+	parte del codigo responsable de encontrar y aplicar un choque entre particulas. Este codigo 
+	se compone de 2 recorridos for, por lo que se comprueba que cada particula por separado no 
+	choque con las demas, es por esto que aumento de forma exponencia el tiempo necesario para
+	recorrer estos ciclos y resolver de forma adecuada el programa.
 
