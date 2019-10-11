@@ -12,23 +12,34 @@ _gr = 1e-3 * _kg
 _in = 2.54*_cm
 
 g = 9.81*_m/_s**2
-d= 5.6*_mm
+d= 0.15*_mm
 
 rho_agua = 1000.*_kg/(_m**3)
 rho_particula = 2650.*_kg/(_m**3)
 
-dt = 0.001*_s  #paso de tiempo
-tmax = 0.5*_s  # tiempo maximo de simulacion
+dt = 0.0001*_s    	# paso de tiempo 
+tmax = 2*_s  # tiempo maximo de simulacion
 ti = 0.*_s # tiempo actual
 
-Nparticulas = 1
+try :
+	data = load("initial_condition.npz")
+	x0 = data["x0"]
+	y0 = data["y0"]
+	vx0 = data["vx0"]
+	vy0 = data["vy0"]
+	Nparticulas = data["Nparticulas"]
+	print "Numero de particulas: "+Nparticulas
+	data =close
 
 
-x0 =100*d*rand(Nparticulas)
-y0 = 30*d*rand(Nparticulas) + d
 
-vx0 = rand(Nparticulas)/2
-vy0 = rand(Nparticulas)/2
+except: #forma random
+	print "no se pudieron cargar los archivos"
+	Nparticulas = 2
+	x0 =100*d*rand(Nparticulas)
+	y0 = 30*d*rand(Nparticulas) + d
+	vx0 = rand(Nparticulas)/2
+	vy0 = rand(Nparticulas)/2
 
 
 A = pi*(d/2)**2
@@ -50,6 +61,10 @@ Rp = 73.
 R = (rho_particula/rho_agua - 1)
 alpha = 1/(1 + R + Cm)
 
+tau_star = 0.067   # Tau star (Shear stress)
+tau_cr = 0.22*Rp**(-0.6)+0.06*10**(-7*Rp**(-0.6))   # tau critico
+ustar = sqrt(tau_star * g * Rp * d)		# uestrella de verdad ahora si final final ok para siempre
+
 ihat = array([1,0])
 jhat = array([0,1])
 
@@ -63,27 +78,42 @@ def velocity_field(x):
 	return array([uf,0])
 	
 
-vfx = velocity_field([0,4*d])[0]  #Normalizado d
-k_penal = 100*0.5*Cd*rho_agua*A*norm(vfx)**2/(1*_mm)
+vfx = velocity_field([0, 10*d])[0]
+k_penal = 0.5*Cd*rho_agua*A*norm(vfx)**2/(d/20)
+
+def fuerzas_hidrodinamicas(x,v,d,area,masa):
+
+	xtop = x + (d/2)*jhat
+	xbot = x - (d/2)*jhat
+	vf = velocity_field(x + 0*jhat)
+
+	vrelf_top = abs(velocity_field(xtop)[0])
+	vrelf_bot = abs(velocity_field(xbot)[0])
+
+	vrel = vf - v
+
+	Cd = 0.47
+	fD = (0.5*Cd*alpha*rho_agua*norm(vrel)*area)*vrel
+
+	fL = (0.5*CL*alpha*rho_agua*(vrelf_top - vrelf_bot)*area)*vrel[0]*jhat
+	fW = (-masa*g)*jhat
+
+	Fh = fW + fD + fL
+
+	return Fh
+
 
 
 def particula(z,t):
 	zp = zeros(4*Nparticulas)
 
 	for i in range(Nparticulas):
+
 		di = d 
 		xi = z[4*i:(4*i+2)]
 		vi = z[4*i+2:(4*i+4)]
-
-		vf = velocity_field(xi)
-		vf_top = norm(velocity_field(xi + (di/2)*jhat)) #falta
-		vf_bot = norm(velocity_field(xi - (di/2)*jhat)) #falta
-		vrel = vf - vi
-		fD = (0.5*Cd*alpha*rho_agua*norm(vrel)*A)*vrel  #falta
-		fL = (0.5*CL*alpha*rho_agua*(vf_top**2 -vf_bot**2)*A)*jhat #falta
-
-		Fi = W + fD + fL
-
+		Fi = fuerzas_hidrodinamicas(xi,vi,di,A,m)
+		
 		if xi[1] < 0:
 			Fi[1] += -k_penal*xi[1]
 
@@ -128,6 +158,6 @@ for i in range(Nparticulas):
 	plot(xi,yi,"--.",color=col)
 
 ax.axhline(d/2,color="k",linestyle="--")
-
+show()
 axis("equal")
 savefig("Grafico_{0:02.0f}.png".format(Nparticulas))
