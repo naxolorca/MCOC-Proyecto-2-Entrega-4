@@ -165,6 +165,6 @@ ax.axhline(d/2,color="k",linestyle="--")
 
 
 savefig("Grafico_{0:02.0f}.png".format(Nparticulas))
-show()
+#show()
 axis("equal")
 

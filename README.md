@@ -11,42 +11,29 @@ Para una simulación con un dt de 0.001 segundos, un t max de 0.5 segundos y un 
 
 ## Tiempo de simulación
 
-	Para 1 particula:   0.8s
-	Para 2 particulas:  2.0s
-	Para 3 particulas:  3.5s
-	Para 5 particulas:  8.6s
-	Para 8 particulas:  48.3s
-	Para 10 particulas: 80.8s
-	Para 12 particulas: 151.6s
+	Para la simulación 1:   547.0s
+	Para la simulación 2:   52.0s
+	Para la simulación 3:   5.1s
+	Para la simulación 4:   --s
 	
 ## Graficos
-**1 particula**
+**Simulacíon 1**
 
-![Grafico_01](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/Grafico_01.png)
+![Grafico_01](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/simulacion-1/Grafico_10.png)
 
-**2 particulas**
+**Simulacíon 2**
 
-![Grafico_02](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/Grafico_02.png)
+![Grafico_02](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/simulacion-2/Grafico_05.png)
 
-**3 particulas**
+**Simulacíon 3**
 
-![Grafico_03](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/Grafico_03.png)
+![Grafico_03](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/simulacion-3/Grafico_02.png)
 
-**5 particulas**
+**Simulacíon 4**
 
-![Grafico_05](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/Grafico_05.png)
+![Grafico_05](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/simulacion-4/Grafico_20.png)
 
-**8 particulas**
 
-![Grafico_08](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/Grafico_08.png)
-
-**10 particulas**
-
-![Grafico_10](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/Grafico_10.png)
-
-**12 particulas**
-
-![Grafico_12](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/Grafico_12.png)
 
 ## Discusión
 
