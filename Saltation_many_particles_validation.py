@@ -12,7 +12,11 @@ _gr = 1e-3 * _kg
 _in = 2.54*_cm
 
 g = 9.81*_m/_s**2
-d= 0.15*_mm
+d = 0.15*_mm
+x = linspace(0, 20*d,4000)
+x_mod_d = (x % d) - d/2
+y = sqrt((d/2)**2 - x_mod_d**2)
+
 
 rho_agua = 1000.*_kg/(_m**3)
 rho_particula = 2650.*_kg/(_m**3)
@@ -21,25 +25,16 @@ dt = 0.0001*_s    	# paso de tiempo
 tmax = 2*_s  # tiempo maximo de simulacion
 ti = 0.*_s # tiempo actual
 
-try :
-	data = load("initial_condition.npz")
-	x0 = data["x0"]
-	y0 = data["y0"]
-	vx0 = data["vx0"]
-	vy0 = data["vy0"]
-	Nparticulas = data["Nparticulas"]
-	print "Numero de particulas: "+Nparticulas
-	data =close
 
+data = load("initial_condition.npz")
+x0 = data["x0"]
+y0 = data["y0"]
+vx0 = data["vx0"]
+vy0 = data["vy0"]
+Nparticulas = data["Nparticulas"]
+print "Numero de particulas: ",Nparticulas
+data = close
 
-
-except: #forma random
-	print "no se pudieron cargar los archivos"
-	Nparticulas = 2
-	x0 =100*d*rand(Nparticulas)
-	y0 = 30*d*rand(Nparticulas) + d
-	vx0 = rand(Nparticulas)/2
-	vy0 = rand(Nparticulas)/2
 
 
 A = pi*(d/2)**2
@@ -68,7 +63,7 @@ ustar = sqrt(tau_star * g * Rp * d)		# uestrella de verdad ahora si final final 
 ihat = array([1,0])
 jhat = array([0,1])
 
-ustar = 0.14 # paper entre 0.14 y 0.23 (m/s)
+#ustar = 0.14 # paper entre 0.14 y 0.23 (m/s)
 def velocity_field(x):
 	z = x[1] /d
 	if z > 1./30:
@@ -113,9 +108,16 @@ def particula(z,t):
 		xi = z[4*i:(4*i+2)]
 		vi = z[4*i+2:(4*i+4)]
 		Fi = fuerzas_hidrodinamicas(xi,vi,di,A,m)
-		
-		if xi[1] < 0:
-			Fi[1] += -k_penal*xi[1]
+		#Rebote en cama de esferas
+		x_mod_d = (xi[0] % d) - d/2
+		y = sqrt((d/2)**2 - x_mod_d**2)
+
+		if xi[1] < y :
+			
+			if xi[1] < 0:
+				Fi[1] += -k_penal*xi[1]
+			else:
+				Fi[1] += k_penal*xi[1]
 
 		zp[4*i:(4*i+2)] = vi
 		zp[4*i+2:(4*i+4)] = Fi/m
@@ -158,6 +160,9 @@ for i in range(Nparticulas):
 	plot(xi,yi,"--.",color=col)
 
 ax.axhline(d/2,color="k",linestyle="--")
+
+
+savefig("Grafico_{0:02.0f}.png".format(Nparticulas))
 show()
 axis("equal")
-savefig("Grafico_{0:02.0f}.png".format(Nparticulas))
+
