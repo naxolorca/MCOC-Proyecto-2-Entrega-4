@@ -17,7 +17,7 @@ doit = True
 t = arange(0,tmax,dt)
 Nt = len(t)
 
-Nparticulas = 150
+Nparticulas = 1
 
 #fout = open("resultado.txt","w")
 
