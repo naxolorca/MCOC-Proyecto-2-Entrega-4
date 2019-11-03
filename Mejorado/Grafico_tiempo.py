@@ -15,7 +15,7 @@ t = [3.01,7.34,20.09,30.29,39.3,60.53,91.71,161.23,257,334.62,433.89]
 
 plot(t,n)
 title("Grafico N vs T",size=30)
-ylabel("Tiempo en segundos")
-xlabel("Numero de particulas")
+xlabel("Tiempo en segundos")
+ylabel("Numero de particulas")
 
 savefig("grafico.png")
