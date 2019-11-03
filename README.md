@@ -17,19 +17,19 @@ Para una simulación con un dt de 0.001 segundos, un t max de 0.5 segundos y un 
 	Para la simulación 4:   --s
 	
 ## Graficos
-**Simulacíon 1**
+**Simulación 1**
 
 ![Grafico_01](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/simulacion-1/Grafico_10.png)
 
-**Simulacíon 2**
+**Simulación 2**
 
 ![Grafico_02](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/simulacion-2/Grafico_05.png)
 
-**Simulacíon 3**
+**Simulación 3**
 
 ![Grafico_03](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/simulacion-3/Grafico_02.png)
 
-**Simulacíon 4**
+**Simulación 4**
 
 ![Grafico_05](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/simulacion-4/Grafico_20.png)
 
@@ -59,47 +59,47 @@ Para una simulación con un dt de 0.001 segundos, un t max de 0.5 segundos y un 
 	Para la simulación 10:   334.62s 	N = 120
 	Para la simulación 11:   433.89s 	N = 150
 
-**Simulacíon 1**
+**Simulación 1**
 
 ![Grafico_1](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/Mejorado/grafico/1.png)
 
-**Simulacíon 2**
+**Simulación 2**
 
 ![Grafico_2](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/Mejorado/grafico/3.png)
 
-**Simulacíon 3**
+**Simulación 3**
 
 ![Grafico_3](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/Mejorado/grafico/10.png)
 
-**Simulacíon 4**
+**Simulación 4**
 
 ![Grafico_4](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/Mejorado/grafico/15.png)
 
-**Simulacíon 5**
+**Simulación 5**
 
 ![Grafico_5](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/Mejorado/grafico/20.png)
 
-**Simulacíon 6**
+**Simulación 6**
 
 ![Grafico_6](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/Mejorado/grafico/30.png)
 
-**Simulacíon 7**
+**Simulación 7**
 
 ![Grafico_7](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/Mejorado/grafico/45.png)
 
-**Simulacíon 8**
+**Simulación 8**
 
 ![Grafico_8](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/Mejorado/grafico/70.png)
 
-**Simulacíon 9**
+**Simulación 9**
 
 ![Grafico_9](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/Mejorado/grafico/100.png)
 
-**Simulacíon 10**
+**Simulación 10**
 
 ![Grafico_10](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/Mejorado/grafico/120.png)
 
-**Simulacíon 11**
+**Simulación 11**
 
 ![Grafico_11](https://raw.githubusercontent.com/naxolorca/MCOC-Proyecto-2-Entrega-4/master/Mejorado/grafico/150.png)
 
