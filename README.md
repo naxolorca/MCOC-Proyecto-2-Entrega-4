@@ -110,4 +110,7 @@ Para una simulación con un dt de 0.001 segundos, un t max de 0.5 segundos y un 
 
 ## Discusión
 
-	Utilizando este codigo podemos apreciar en el ultimo grafico, que el tiempo que se demora en ejecutar aumenta de forma lineal al aumentar la cantidad de partculas.
+	Utilizando este codigo podemos apreciar en el ultimo
+	grafico, que el tiempo que se demora en ejecutar
+	aumenta de forma lineal al aumentar la cantidad de
+	partculas.
